@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --txt-color: #fff;
+    --border-color: rgb(102, 91, 91, 0.1) ;
+    --background-header: black;
+    --backgroind-main: #101010;
+    --details: #2fbf71 ;
+}
+
+#headerv {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: var(--background-header);
+    color: var(--txt-color);
+    font-family: "Rubik", sans-serif;
+    overflow: hidden;
+}
+
+#headervcircle {
+    background: var(--details);
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    position: absolute;
+    top: -180px ;
+    left: -50px ;
+    z-index: -1;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 65px 0 0;
+}
+
+#profilefoto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--txt-color);
+    background: url('../img/jv.jpg') no-repeat center center/ cover ;
+}
+
+#profilenome {
+    margin-top: 14px;
+    letter-spacing: 2px;
+}
+
+#menuv {
+    margin: 45px 0;
+}
+
+#menuv a {
+    display: block;
+    color: var(--txt-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#menuv a:hover {
+    color: var(--details);
+    box-shadow: inset 3px 0 0 var(--details) ;
+}
+
+a #contatolink {
+    border-bottom: none;
+}
+
+#social {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 250px;
+    padding: 12px 0;
+}
+
+#social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration:none ;
+    color: var(--txt-color);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+#social a:hover {
+    background: var(--details);
+}
+
+
+main {
+    position: relative;
+    margin-left: 250px;
+    background: var(--backgroind-main);
+    min-height: 100vh;
+    height: auto;
+    color: var(--txt-color);
+    font-family: "Rubik", sans-serif;
+}
+
+section #sectioninicio {
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+}
