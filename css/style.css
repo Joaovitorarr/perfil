@@ -90,3 +90,19 @@ a #contatolink {
 #social a:hover {
     background: var(--details);
 }
+
+main {
+    position: relative;
+    margin-left: 250px;
+    background: var(--backgroind-main);
+    min-height: 100vh;
+    height: auto;
+    color: var(--txt-color);
+    font-family: "Rubik", sans-serif;
+}
+
+section #sectioninicio {
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+} 
