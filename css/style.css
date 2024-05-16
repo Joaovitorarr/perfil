@@ -34,6 +34,10 @@
     align-items: center;
 }
 
+#botaomenu {
+    display: none;
+}
+
 label[for='botaomenu'] {
     cursor: pointer;
     background: var(--details);
@@ -44,6 +48,7 @@ label[for='botaomenu'] {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 #headerv {
@@ -53,7 +58,7 @@ label[for='botaomenu'] {
     background: var(--background-header);
     color: var(--txt-color);
     font-family: "Rubik", sans-serif;
-    display: none;
+    z-index: 3;
 }
 
 #profile {
@@ -134,7 +139,14 @@ main {
    
 }
 
-section> a {
+section {
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 50%;
+}
+
+section a {
     text-decoration: none;
     color: var(--txt-color);
     display: flex;
@@ -145,31 +157,29 @@ section> a {
     padding: 10px 20px;
 }
 
-section #sectioninicio {
-    width: 90%;
-    margin: 0 auto;
-    height: 100vh;
+section#sectioninicio {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 } 
 
-section #sectioninicio > div {
+section#sectioninicio div {
     width: 49%;
     min-width: 300px;
 }
-section #sectioninicio > h1 {
+section#sectioninicio h1 {
     font-size: 65px;
     margin-bottom: 20px;
 }
 
-section #sectioninicio > h2 {
+section#sectioninicio h2 {
     font-size: 25px;
     font-weight: normal;
     margin-bottom: 20px;
 }
 
-section #sectioninicio > p {
+section#sectioninicio p {
     font-size: 18px;
     font-weight: lighter;
     margin-bottom: 20px;
@@ -178,8 +188,8 @@ section #sectioninicio > p {
 }
 
 
-section #sectioninicio > img {
-    width: 100%;
+section#sectioninicio img {
+    width: 80%;
     border-radius: 50%;
     border: 2px solid var(--txt-color);
 }
@@ -192,13 +202,31 @@ section #sectioninicio > img {
     #headerv {
         margin-left: -250px;
         transition: all 0.4s;
+        display: -250px;
+        top: 0;
+    }
+
+    label[for='botaomenu'] {
+        display: flex;
     }
 
     main {
         margin-left: 0;
         margin-top: 70px;
     }
-    #botao-menu:checked ~ #headerv {
+    #botaomenu:checked ~ #headerv {
         margin-left: 0;
+    }
+}
+
+@media (max-width: 690px) {
+
+
+    section#sectioninicio #incdescricao {
+        width: 100%;
+    }
+
+    section#sectioninicio #incfoto {
+        margin: 0 auto;
     }
 }
