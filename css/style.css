@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --txt-color: #fff;
     --border-color: rgb(102, 91, 91, 0.1) ;
@@ -24,6 +28,7 @@
     color: var(--txt-color);
     font-family: "Rubik", sans-serif;
     z-index: 3;
+    display: none;
 }
 
 #headerh div {
@@ -157,11 +162,26 @@ section a {
     padding: 10px 20px;
 }
 
+section p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+section h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px; 
+}
+
 section#sectioninicio {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    height: 100%;
 } 
 
 section#sectioninicio div {
@@ -173,26 +193,123 @@ section#sectioninicio h1 {
     margin-bottom: 20px;
 }
 
-section#sectioninicio h2 {
-    font-size: 25px;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-
-section#sectioninicio p {
-    font-size: 18px;
-    font-weight: lighter;
-    margin-bottom: 20px;
-    line-height: 1.7;
-    text-align: justify;
-}
-
 
 section#sectioninicio img {
     width: 80%;
     border-radius: 60%;
     border: 2px solid var(--txt-color);
 }
+
+section#sobremim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#sobremim > div {
+    width: 49%;
+    min-width: 300px;
+}
+
+div#sobremimgradefotos {
+    display: flex;
+    gap: 20px;
+}
+
+.sobremimfotos {
+    margin-bottom: 20px;
+}
+
+#sobremimfotocoluna2 {
+    padding-top: 50px;
+}
+
+section#sobremim img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+section#sobremim h2 {
+    font-weight: bolder;
+}
+
+#sobrerod {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.sbmquantidade {
+    display:flex;
+    width: 160px;
+}
+
+.sbmquantidade p:first-child {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.sbmquantidade p:last-child {
+    line-height: 1.2 ;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.card {
+    width: 49%;
+    min-width: 300px;
+    background: var(--background-header);
+    margin-bottom: 20px;
+    padding: 40px;
+}
+
+.card:hover {
+    background: var(--details);
+}
+
+section#servico #servicograde {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section#servico h2 {
+    font-weight: bolder;
+}
+
+#portifoliocardimg {
+    position: relative;
+    width: 500px;
+    height: 250px;
+}
+
+#portifoliocardimg> div:first-child {
+   overflow: hidden;
+}
+
+#portifoliocardimg img {
+    width: 100%;
+    transform: scale(1.1);
+}
+
+#portifoliocardimg:hover img {
+    transform: scale(1.1);
+}
+
+#portifoliocardtitulo {
+    position: absolute;
+    background: var(--background-header);
+    width: 300px;
+    height: 200px ;
+    bottom: -30%;
+    right: 0;
+    padding: 20px;
+    line-height: 200px;
+}
+
+
 
 @media (max-width: 1200px) {
     #headerh {
@@ -217,6 +334,9 @@ section#sectioninicio img {
     #botaomenu:checked ~ #headerv {
         margin-left: 0;
     }
+    section#servico h2 {
+       margin-top: 70px; 
+    }
 }
 
 @media (max-width: 690px) {
@@ -226,7 +346,20 @@ section#sectioninicio img {
         width: 100%;
     }
 
-    section#sectioninicio #incfoto {
-        margin: 0 auto;
+    section#sectioninicio #iniciofoto {
+        margin: 50px 0 auto;
+    }
+
+    section#sobremim #sobremimtxt {
+        width: 100%;
+    }
+
+    section#sobremim #sobremimgradefotos {
+        margin: 50px 0 auto;
+        width: 100px;
+    }
+
+    section#servico .card {
+        width: 100%;
     }
 }
