@@ -283,7 +283,6 @@ section#portifolio #portifoliograde {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: 1px solid red ;
 }
 
 #portifoliocardimg {
@@ -312,22 +311,24 @@ section#portifolio #portifoliograde {
     background: url(../img/tba.png) no-repeat center center/cover;
 }
 
+section#portifolio #portifoliocardimg #portifoliocardtitulo {
+    margin-top: -30%;
+}
+
 section#portifolio #portifoliocardtitulo {
     position: absolute;
     width: 90%;
-    height: 150px;
+    height: 200px;
     background: var(--background-header);
     right: 0;
-    padding: 20px;
+    padding: 20px; 
 }
 
 #portifoliocardtitulo p {
     font-size: 12;
 }
 
-#portifoliocardtitulo p:last-child {
-    font-weight: bolder;
-}
+
 
 section#contato p:last-child {
     display: flex;
@@ -358,6 +359,8 @@ section#contato input {
     margin-bottom: 10px;
     padding: 10px;
 }
+
+section#contato 
 
 section#contato #inputnome, #inputemail {
     width: 49%;
